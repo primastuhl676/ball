@@ -1,15 +1,74 @@
 import GLOOP.*;
+
+
+import javax.media.opengl.GL;
+
 public class Kugel{
-    private GLKugel kugel;
+
+    public GLKugel kugel;
     private Box dieBox;
     private Spielfeld feld;
-    
+
     private double radius;
     private boolean istAktiv;
     private double vX, vZ;
+    private Kugelfangen kugelfangen;
 
-    public Kugel(){
+
+    public Kugel() {
+
+        int x = (int) (Math.random() * 425 - 200 );
+        int z = (int) (Math.random() * 425 - 200);
+        kugel= new GLKugel(0, 30, 0, 20);
+        kugel.verschiebe(0, 0, 0);
+
 
     }
 
+
+    public void bewege() {
+        if(this.habdich())dieBox.sameln();
+        int s = (int) (Math.random() * 10);
+        int t = (int) (Math.random() * 10);
+ kugel.verschiebe(s,0,t);
+ if(this.gibX()<(-425)){
+   kugel.verschiebe(-s,0,-t);
+ }
+        if(this.gibX()>(425)){
+            kugel.verschiebe(-s,0,-t);
+        }
+
+ if(this.gibZ()>(425)){
+  kugel.verschiebe(-s,0,-t);
+ }
+        if(this.gibZ()<(-425)){
+            kugel.verschiebe(-s,0,-t);
+        }
+
+    }
+    private boolean habdich(){
+        double abstand=Math.sqrt(
+                        Math.pow(kugel.gibX()-dieBox.gibX(),2)+
+                        Math.pow(kugel.gibZ()-dieBox.gibZ(),2)
+        );
+        if(abstand<70)return true;
+        else return false;
+
+    }
+
+
+
+
+    public double gibX(){
+        return kugel.gibX();}
+
+    public double gibY(){
+        return kugel.gibY();}
+
+    public double gibZ(){
+        return kugel.gibZ();}
 }
+
+// if (kugel.gibX() < -300){
+
+//}
