@@ -19,7 +19,7 @@ public class Kugel{
 
         int x = (int) (Math.random() * 425 - 200 );
         int z = (int) (Math.random() * 425 - 200);
-        kugel= new GLKugel(0, 30, 0, 20);
+        kugel= new GLKugel(200, 30, 0, 20);
         kugel.verschiebe(0, 0, 0);
 
 
@@ -27,14 +27,13 @@ public class Kugel{
 
 
     public void bewege() {
-        if(this.habdich())dieBox.sameln();
-        int s = (int) (Math.random() * 10);
-        int t = (int) (Math.random() * 10);
+        double s = (double) (Math.random() * 10);
+        double t = (double) (Math.random() * 10);
  kugel.verschiebe(s,0,t);
- if(this.gibX()<(-425)){
+ if(this.gibX()<(0)){
    kugel.verschiebe(-s,0,-t);
  }
-        if(this.gibX()>(425)){
+        if(this.gibX()>(850)){
             kugel.verschiebe(-s,0,-t);
         }
 
