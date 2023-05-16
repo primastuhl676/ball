@@ -10,7 +10,7 @@ public class Kugelfangen {
 
     public Kugelfangen() {
         kamera = new GLEntwicklerkamera();
-        kamera.setzePosition(250, 500, 800);
+        kamera.setzePosition(400, 500, 800);
 
         licht = new GLLicht();
         himmel = new GLHimmel("src/img/Sterne.jpg");

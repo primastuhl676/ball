@@ -11,7 +11,7 @@ public class Box{
 
     public Box() {
         quader = new GLQuader(0,0,0,50,50,50);
-        quader.setzePosition(400,35,0);
+        quader.setzePosition(0,35,-200);
         quader.setzeFarbe(10,0,2);
 
     }
@@ -35,7 +35,7 @@ public class Box{
     }
 
     public void bewegeLinks(){
-        if(this.gibX()<(0)){
+        if(this.gibX()<(-425)){
         }
         else{
             quader.verschiebe(-1,0,0);
@@ -44,7 +44,7 @@ public class Box{
     }
 
     public void bewegeRechts(){
-        if(this.gibX()>(850)){
+        if(this.gibX()>(425)){
 
         }
         else{
@@ -52,9 +52,6 @@ public class Box{
 
         }
     }
-public void sameln(){
-quader.setzeSichtbarkeit(false);
-}
 
 
 
