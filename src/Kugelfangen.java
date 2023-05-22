@@ -20,7 +20,7 @@ public class Kugelfangen {
         kugel = new Kugel[4];
         dieBox = new Box();
         for(int i=0;i< kugel.length;i++){
-            kugel[i]=new Kugel();
+            kugel[i]=new Kugel(dieBox);
         }
         fuehreAus();
 

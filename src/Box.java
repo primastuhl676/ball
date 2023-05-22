@@ -19,7 +19,7 @@ public class Box{
         if(this.gibZ()<(-425)){
         }
         else{
-            quader.verschiebe(0,0,-1);
+            quader.verschiebe(0,0,-1.5);
 
         }
     }
@@ -29,7 +29,7 @@ public class Box{
         if(this.gibZ()>(425)){
         }
         else{
-            quader.verschiebe(0,0,1);
+            quader.verschiebe(0,0,1.5);
 
         }
     }
@@ -38,7 +38,7 @@ public class Box{
         if(this.gibX()<(-425)){
         }
         else{
-            quader.verschiebe(-1,0,0);
+            quader.verschiebe(-1.5,0,0);
 
         }
     }
@@ -48,7 +48,7 @@ public class Box{
 
         }
         else{
-            quader.verschiebe(1,0,0);
+            quader.verschiebe(1.5,0,0);
 
         }
     }
