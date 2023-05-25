@@ -1,6 +1,6 @@
 import GLOOP.*;
 public class Spielfeld{
-    private GLQuader untergrund, rand1, rand2, rand3, rand4;
+    private GLQuader untergrund, rand1, rand2, rand3, rand4,boden,wand,wand2,wand3,wand4;
     private double breite, tiefe;
 
     public Spielfeld(double pBreite, double pTiefe){
@@ -15,6 +15,7 @@ public class Spielfeld{
         rand2.drehe(0,90,0);
         rand3 = new GLQuader(0,20,475,breite,40,50);
         rand4 = new GLQuader(0,20,-475,breite,40,50);
+
 
     }
 }

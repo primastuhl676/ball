@@ -4,6 +4,7 @@ import javax.media.opengl.GL;
 
 public class Box{
     private GLQuader quader;
+    public int punkte;
     private Kugel kugel;
     private Spielfeld feld;
     private double vX,vZ;
@@ -52,9 +53,16 @@ public class Box{
 
         }
     }
+public void punktesammeln(){
+  punkte++;
+
+  }
 
 
 
+public int gibpunkte(){
+   return punkte;
+}
     public double gibX(){
         return quader.gibX();}
 
@@ -63,4 +71,5 @@ public class Box{
 
     public double gibZ(){
         return quader.gibZ();}
+
 }
