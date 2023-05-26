@@ -12,7 +12,7 @@ public class Kugel {
     private Box dieBox;
     private Spielfeld feld;
     private int a = 0;
-public timer time;
+
     private double radius;
     private boolean istAktiv;
     private double vX, vZ;
@@ -68,11 +68,12 @@ t=-t;
     int  p= (int) (Math.random() * 425 - 200);
 public void ende(){
 
-        if(dieBox.gibpunkte()==4||dieBox.gibpunkte()==8||dieBox.gibpunkte()==12||dieBox.gibpunkte()==16||dieBox.gibpunkte()==20){
+        if(dieBox.gibpunkte()==4||dieBox.gibpunkte()==8||dieBox.gibpunkte()==12||dieBox.gibpunkte()==16||dieBox.gibpunkte()==20||dieBox.gibpunkte()==24){
 kugel.setzePosition(o,30,p);
+this.bewege();
 
         }
-        if(dieBox.gibpunkte()==20){Sys.beenden();}
+        if(dieBox.gibpunkte()==24){Sys.beenden();}
 
 
 }

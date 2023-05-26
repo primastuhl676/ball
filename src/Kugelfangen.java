@@ -27,6 +27,7 @@ t1.verschiebe(0,200,0);
         dieBox = new Box();
         for(int i=0;i< kugel.length;i++){
             kugel[i]=new Kugel(dieBox);
+            kugel[i].bewege();
         }
         fuehreAus();
 
